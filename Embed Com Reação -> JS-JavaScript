@@ -1,0 +1,44 @@
+js ___Embed com Reação___ 
+const Discord = require(`discord.js`);
+
+
+
+    exports.run = async (bot,message,args) => {
+
+        let embed = new Discord.MessageEmbed()
+        .setColor(`ff0a7e`)
+        .setTitle(`Help - `)
+        .setDescription(`***Olá***`)
+
+        message.channel.send(message.author, embed).then(msg => { 
+            msg.react(`marcação do emoji`).then(() => { 
+            msg.react(`marcação do emoji`);
+            })
+
+
+            const pagina1 = msg.createReactionCollector((reaction, user) => reaction.emoji.id == `id` && user.id == message.author.id, {time: 60000})
+            const voltar = msg.createReactionCollector((reaction, user) => reaction.emoji.id `id` && user.id == message.author.id, {time: 60000})
+            moderacao.on(`collect`, r =>{  
+
+                let embed_two = new Discord.MessageEmbed()
+.setColor(`BLACK`)
+.setTitle(`***Meus Comandos***`)
+.setDescription(`***Help***`)
+         
+                msg.edit(embed_two)
+        r.users.remove(message.author.id) 
+            })
+            voltar.on(`collect`, r =>{ 
+                let embed_three = new Discord.MessageEmbed()
+        .setColor(`ff0a7e`)
+        .setTitle(`Help -`)
+        .setDescription(`***Olá ***`)
+        
+        msg.edit(embed_three)
+        r.users.remove(message.author.id) 
+            })
+        })
+    }
+
+
+pedroafonso#7917 Com todos Seus Direitos Reservados copyright
