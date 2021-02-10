@@ -1,0 +1,39 @@
+dbd sistema de antilink "Avançado":
+
+ 
+Use Variável
+ 
+Var=env 
+Valor=no 
+ 
+1.Antilink on
+ 
+$nomention 
+$setServerVar[env;yes] 
+$title[Anti Links On] 
+$deletecommand 
+$description[ <@$authorID> Ativou o Anti Links] 
+$onlyPerms[managemessages;***Você Não tem Permissão De:*** `Gerenciar Mensagens`]
+ 
+2. Antilink off
+ 
+$nomention 
+$setServerVar[env;no] 
+$title[Anti Links Off] 
+$deletecommand 
+$description[ <@$authorID> Desativou o Anti Links]
+$onlyPerms[managemessages;***Você Não Tem Permissão De:*** `Gerenciar mensagens`]
+ 
+3. Bote no trigger : https:// 
+                            Ou discord.gg
+ 
+Codigo:
+  
+$onlyIf[$isAdmin[$authorID]!=true;]
+$deletecommand
+$description[<@$authorID> ***Você Não Pode Mandar Convite De Servers ou links Aqui!*** !]
+$deleteIn[5s]
+$enabled[$getServerVar[env];]
+
+
+pedroafonso#7917 Com todos Seus Direitos Reservados copyright
