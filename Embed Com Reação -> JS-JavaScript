@@ -17,7 +17,7 @@ const Discord = require(`discord.js`);
 
 
             const pagina = msg.createReactionCollector((reaction, user) => reaction.emoji.id == `id` && user.id == message.author.id, {time: 60000})
-            const voltar = msg.createReactionCollector((reaction, user) => reaction.emoji.id `id` && user.id == message.author.id, {time: 60000})
+            const voltar = msg.createReactionCollector((reaction, user) => reaction.emoji.id == `id` && user.id == message.author.id, {time: 60000})
           
   pagina.on(`collect`, r =>{  
 
