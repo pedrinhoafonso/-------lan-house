@@ -1,4 +1,4 @@
-js ___Embed com Reação___ 
+// Embed com Reação
 const Discord = require(`discord.js`);
 
 
@@ -16,9 +16,10 @@ const Discord = require(`discord.js`);
             })
 
 
-            const pagina1 = msg.createReactionCollector((reaction, user) => reaction.emoji.id == `id` && user.id == message.author.id, {time: 60000})
+            const pagina = msg.createReactionCollector((reaction, user) => reaction.emoji.id == `id` && user.id == message.author.id, {time: 60000})
             const voltar = msg.createReactionCollector((reaction, user) => reaction.emoji.id `id` && user.id == message.author.id, {time: 60000})
-            moderacao.on(`collect`, r =>{  
+          
+  pagina.on(`collect`, r =>{  
 
                 let embed_two = new Discord.MessageEmbed()
 .setColor(`BLACK`)
